@@ -1,0 +1,66 @@
+.xyChart {
+  // width: 90%;
+  height: 262px;
+  border: 2px solid #006cc1;
+
+            border-image: -webkit-linear-gradient(#006cc1 20%, #2ED 50%,#006cc1 80%) 20 20;
+
+            // border-image: -moz-linear-gradient(#006cc1, #2ED) 20 20;
+
+            // border-image: -o-linear-gradient(#006cc1, #2ED) 20 20;
+
+            // border-image: linear-gradient(#006cc1, #2ED) 20 20;
+  position: relative;
+  margin: 15px;
+  .positionSpan{
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+  .lefttopSpan {
+    left: -3px;
+    top: -3px;
+    border-top:3px solid  #2ED;
+    border-left: 3px solid  #2ED;;
+  }
+  .righttopSpan {
+    right: -3px;
+    top: -3px;
+    border-top:3px solid  #2ED;
+    border-right: 3px solid  #2ED;;
+  }
+  .leftbottomSpan {
+    left: -3px;
+    bottom: -3px;
+    border-bottom:3px solid  #2ED;
+    border-left: 3px solid  #2ED;;
+  }
+  .rightbottomSpan {
+    right: -3px;
+    bottom: -3px;
+    border-bottom:3px solid  #2ED;
+    border-right: 3px solid  #2ED;;
+  }
+
+  .header{
+    width: 100%;
+    height: 36px;
+    background-image: linear-gradient(to right, #3053AF , rgba(0,0,0,0));
+    display: flex;
+    margin: 12px;
+
+    justify-content: space-between;
+    >div:nth-child(1){
+      margin-left: 15px;
+      font-size: 16px;
+      padding-top: 6px;
+
+    }
+    >div:nth-child(2){
+      margin-right: 25px;
+      padding-top: 8px;
+
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.barEchart {
+  // width: 90%;
+  height: 313px;
+  border: 2px solid #006cc1;
+  border-image: -webkit-linear-gradient(#006cc1 20%, #2ED 50%,#006cc1 80%) 20 20;
+  border-image: -moz-linear-gradient(#006cc1 20%, #2ED 50%,#006cc1 80%) 20 20;
+  border-image: -o-linear-gradient(#006cc1 20%, #2ED 50%,#006cc1 80%) 20 20;
+  border-image: linear-gradient(#006cc1 20%, #2ED 50%,#006cc1 80%) 20 20;
+  position: relative;
+  margin: 15px;
+  .positionSpan{
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+  .lefttopSpan {
+    left: -3px;
+    top: -3px;
+    border-top:3px solid  #2ED;
+    border-left: 3px solid  #2ED;;
+  }
+  .righttopSpan {
+    right: -3px;
+    top: -3px;
+    border-top:3px solid  #2ED;
+    border-right: 3px solid  #2ED;;
+  }
+  .leftbottomSpan {
+    left: -3px;
+    bottom: -3px;
+    border-bottom:3px solid  #2ED;
+    border-left: 3px solid  #2ED;;
+  }
+  .rightbottomSpan {
+    right: -3px;
+    bottom: -3px;
+    border-bottom:3px solid  #2ED;
+    border-right: 3px solid  #2ED;;
+  }
+
+  .header{
+    height: 36px;
+    // line-height: 30px;
+    background-image: linear-gradient(to right, #3053AF , rgba(0,0,0,0));
+    margin: 12px;
+    display: flex;
+    justify-content: space-between;
+    >div:nth-child(1){
+      margin-left: 15px;
+      font-size: 16px;
+      padding-top: 6px;
+    }
+    >div:nth-child(2){
+      margin-right: 15px;
+      font-size: 10px;
+      padding-top: 6px;
+      .tab{
+        border: 1px solid #40D5F5;
+        border-radius: 3px;
+        cursor: pointer;
+        // height: 20px;
+        // display: inline-block;
+        .leftTab{
+          display: inline-block;
+          color:#40D5F5 ;
+          padding: 3px 5px;
+        }
+        .rightTab{
+          display: inline-block;
+          color:#40D5F5 ;
+          padding: 3px 5px;
+        }
+        .active{
+          background: #0C3E68;
+
+        }
+      }
+    }
+  }
+}

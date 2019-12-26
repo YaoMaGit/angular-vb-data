@@ -1,0 +1,18 @@
+<div class="barEchart">
+  <div class="lefttopSpan positionSpan"></div>
+  <div class="righttopSpan positionSpan"></div>
+  <div class="leftbottomSpan positionSpan"></div>
+  <div class="rightbottomSpan positionSpan"></div>
+  <div class="header">
+    <div>
+      {{title}}
+    </div>
+    <div>
+      <div class="tab">
+        <span class="leftTab" [ngClass]="{ active: tabActive === 1 }" (click)="tab(1)">货物运输量</span>
+        <span class="rightTab" [ngClass]="{ active: tabActive === 2 }" (click)="tab(2)">货物周转量</span>
+      </div>
+    </div>
+  </div>
+  <div echarts [options]="options"></div>
+</div>

@@ -1,0 +1,109 @@
+<div id="newechartsIndex">
+  <div echarts [options]="optionsMap" id="echartsec" [autoResize]="true"></div>
+  <div id="moudelSelect">
+    <div class="item">
+      <span class="itemImg1"><span></span></span
+      ><span class="itemName">横向物流大通道</span>
+    </div>
+    <div class="item">
+      <span class="itemImg2"><span></span></span
+      ><span class="itemName">纵向物流大通道</span>
+    </div>
+    <div class="item">
+      <span class="itemImg3"><span></span></span
+      ><span class="itemName">省内骨干城市</span>
+    </div>
+    <div class="item">
+      <span class="itemImg4"><span></span></span
+      ><span class="itemName">区域重要城市</span>
+    </div>
+    <div class="item">
+      <span class="itemImg5"><span></span></span
+      ><span class="itemName">物流园区</span>
+    </div>
+  </div>
+  <div class="dataMath">
+    <div class="lists_frist">
+      <ul>
+        <li class="lifrist">
+          <nz-input-group [nzSuffix]="suffixIconSearch">
+            <input type="text" nz-input placeholder="输入搜索内容" />
+          </nz-input-group>
+          <ng-template #suffixIconSearch>
+            <i nz-icon type="search" (click)="searchClick()"></i>
+          </ng-template>
+        </li>
+      </ul>
+      <ul class="tabdata">
+        <li
+          *ngFor="let tabData of tabDatas; let i = index"
+          [ngClass]="{ active: tabData.isActive }"
+          (click)="clicktab(tabData.id)"
+        >
+          {{ tabData.name }}
+        </li>
+      </ul>
+      <ul class="listG" *ngIf="status; else telse">
+        <li *ngFor="let itemLine of formLines; let i = index" :key="i">
+          <span class="firstSpan" [ngClass]="{ activeS: itemLine.id <= 3 }">{{
+            itemLine.id
+          }}</span>
+          <span>{{ itemLine.name }}</span>
+          <span>{{ itemLine.lineNums }}</span>
+        </li>
+      </ul>
+      <ng-template #telse>
+        <ul class="listZ">
+          <li *ngFor="let toLine of toLines; let i = index" :key="i">
+            <span class="firstSpan" [ngClass]="{ activeS: toLine.id <= 3 }">{{
+              toLine.id
+            }}</span>
+            <span>{{ toLine.name }}</span>
+            <span>{{ toLine.lineNums }}</span>
+          </li>
+        </ul>
+      </ng-template>
+    </div>
+    <div class="lists_second">
+      <h3>
+        <span class="arrowBiao"></span>
+        <span class="arrowText">通道资源覆盖率</span>
+      </h3>
+      <ul>
+        <li>
+          <span class="cityBiao hong"></span>
+          <span>骨干城市</span>
+          <span>31/34</span>
+          <nz-progress
+            [nzStrokeColor]="{ '0%': '#AAEFFF', '100%': '#cccccc' }"
+            nzStatus="active"
+            [nzPercent]="91.18"
+          >
+          </nz-progress>
+        </li>
+        <li>
+          <span class="cityBiao hong"></span>
+          <span>区域城市</span>
+          <span>208/333</span>
+          <nz-progress
+            [nzStrokeColor]="{ '0%': '#AAEFFF', '100%': '#cccccc' }"
+            nzStatus="active"
+            [nzPercent]="65.66"
+          >
+          </nz-progress>
+        </li>
+        <li>
+          <span class="cityBiao hong"></span>
+          <span>县级城市</span>
+          <span>787/2016</span>
+          <nz-progress
+            [nzStrokeColor]="{ '0%': '#AAEFFF', '100%': '#cccccc' }"
+            nzStatus="active"
+            [nzPercent]="30.29"
+          >
+          </nz-progress>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

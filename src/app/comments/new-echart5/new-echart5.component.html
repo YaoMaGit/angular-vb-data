@@ -1,0 +1,266 @@
+<div>
+  <div class="title"><span>河南省仓储资源监测</span></div>
+</div>
+<div class="echartBox">
+  <div class="left">
+    <app-xy-line
+      [type]="'A'"
+      [title]="'仓库出租季度平均单价趋势'"
+      [dw]="'元/㎡/季度'"
+      [legend]="'false'"
+      [color]="'rgba(24,177,241'"
+      [xValue]="['第一季度', '第二季度', '第三季度']"
+      [yValue]="[18.6, 19, 18.7]"
+    ></app-xy-line>
+    <app-pie-echart
+      [title]="'各地市仓储占比统计'"
+      [pieValue1]="pieValue7"
+      [pieValue2]="pieValue8"
+      [pieValue3]="pieValue9"
+    >
+    </app-pie-echart>
+  </div>
+  <div class="center">
+    <div class="round1">
+      <div class="name">仓储总数量</div>
+      <div class="num">1409个</div>
+    </div>
+    <div class="round2">
+      <div class="name">
+        仓储总面积
+      </div>
+      <div class="num">
+        2987.83万㎡
+      </div>
+    </div>
+    <app-sandian></app-sandian>
+  </div>
+  <div class="right">
+    <app-pie-echart
+      [title]="'仓储类型占比统计'"
+      [pieValue1]="pieValue1"
+      [pieValue2]="pieValue2"
+      [pieValue3]="pieValue3"
+    >
+    </app-pie-echart>
+    <app-pie-echart
+      [title]="'建筑类型占比统计'"
+      [pieValue1]="pieValue4"
+      [pieValue2]="pieValue5"
+      [pieValue3]="pieValue6"
+    >
+    </app-pie-echart>
+  </div>
+</div>
+<div class="bottomEchartBox">
+  <div class="left">
+    <app-xy-line
+    [type]="'B'"
+    [title]="'建筑类型仓储数量'"
+    [dw]="'个'"
+    [legend]="'false'"
+    [color]="'rgba(129, 229, 164'"
+    [xValue]="[
+      '平库',
+      '高台库',
+      '楼库',
+      '高标库',
+      '坡道库',
+      '立体库',
+      '地下库',
+      '其它'
+    ]"
+    [yValue]="[988, 194, 309, 48, 12, 12, 4, 4]"
+  ></app-xy-line>
+  </div>
+  <div class="right">
+    <app-xy-line
+      [type]="'B'"
+      [title]="'仓储类型数量'"
+      [dw]="'个'"
+      [legend]="'false'"
+      [color]="'rgba(25,241,249'"
+      [xValue]="[
+        '普通仓',
+        '恒温仓',
+        '冷藏仓',
+        '冷冻仓',
+        '危化品仓',
+        '医药仓',
+        '露天堆场'
+      ]"
+      [yValue]="[1326, 47, 33, 18, 1, 7, 54]"
+    ></app-xy-line>
+  </div>
+</div>
+<div class="bottomEchartBox">
+  <div class="left">
+    <app-xy-line
+      [type]="'S'"
+      [title]="'仓储类型面积'"
+      [dw]="'万平方米'"
+      [legend]="'true'"
+      [color]="'rgba(50, 197, 233'"
+      [color1]="'rgba(251, 114, 147'"
+      [xValue]="[
+        '普通仓',
+        '恒温仓',
+        '冷藏仓',
+        '冷冻仓',
+        '危化品仓',
+        '医药仓',
+        '露天堆场'
+      ]"
+      [yValue]="[635.58, 58.26, 16.06, 11.98, 30.62, 4.96, 123.52]"
+      [yValue1]="[2686.3, 210.68, 117.49, 132.11, 41.06, 47.64, 190.5]"
+    ></app-xy-line>
+  </div>
+  <div class="right">
+    <app-xy-line
+      [type]="'S'"
+      [title]="'建筑类型面积'"
+      [dw]="'万平方米'"
+      [legend]="'true'"
+      [color]="'rgba(224, 140, 49'"
+      [color1]="'rgba(159, 230, 184'"
+      [xValue]="[
+        '平库',
+        '高台库',
+        '楼库',
+        '高标库',
+        '坡道库',
+        '立体库',
+        '地下库',
+        '其它'
+      ]"
+      [yValue]="[397.36, 191.63, 274.51, 152.08, 49.2, 33.66, 20.2, 3.05]"
+      [yValue1]="[1527.77, 1040.62, 1223.78, 416.43, 140.3, 117.01, 58.6, 9.27]"
+    ></app-xy-line>
+  </div>
+</div>
+<div class="bottomEchartBox">
+  <div class="center">
+    <app-xy-line
+      [type]="'B'"
+      [title]="'各地市仓储数量'"
+      [dw]="'个'"
+      [legend]="'false'"
+      [color]="'rgba(82, 163, 253'"
+      [barWidth]="40"
+      [xValue]="[
+        '郑州市',
+        '开封市',
+        '洛阳市',
+        '平顶山市',
+        '安阳市',
+        '鹤壁市',
+        '新乡市',
+        '焦作市',
+        '濮阳市',
+        '许昌市',
+        '漯河市',
+        '三门峡市',
+        '南阳市',
+        '商丘市',
+        '信阳市',
+        '周口市',
+        '驻马店市',
+        '济源市'
+      ]"
+      [yValue]="[
+        535,
+        77,
+        176,
+        35,
+        50,
+        11,
+        93,
+        36,
+        24,
+        75,
+        51,
+        28,
+        47,
+        8,
+        52,
+        44,
+        46,
+        21
+      ]"
+    ></app-xy-line>
+  </div>
+</div>
+
+<div class="bottomEchartBox">
+  <div class="center">
+    <app-xy-line
+      [type]="'S'"
+      [title]="'各地市仓储面积'"
+      [dw]="'万平方米'"
+      [legend]="'true'"
+      [color]="'rgba(255, 219, 92'"
+      [color1]="'rgba(92, 130, 255'"
+      [barWidth]="25"
+      [xValue]="[
+        '郑州市',
+        '开封市',
+        '洛阳市',
+        '平顶山市',
+        '安阳市',
+        '鹤壁市',
+        '新乡市',
+        '焦作市',
+        '濮阳市',
+        '许昌市',
+        '漯河市',
+        '三门峡市',
+        '南阳市',
+        '商丘市',
+        '信阳市',
+        '周口市',
+        '驻马店市',
+        '济源市'
+      ]"
+      [yValue]="[
+        351.42,
+        33.75,
+        65.56,
+        20.51,
+        15.98,
+        5.45,
+        46.75,
+        29.56,
+        9.56,
+        25.55,
+        49.53,
+        7.65,
+        18.51,
+        28.57,
+        29.44,
+        14.37,
+        39.32,
+        5.38
+      ]"
+      [yValue1]="[
+        1844.16,
+        53.91,
+        169.39,
+        39.57,
+        61.31,
+        13.75,
+        151.48,
+        112.06,
+        39.62,
+        74.78,
+        80.3,
+        19.67,
+        62.09,
+        52.4,
+        65.21,
+        29.73,
+        111.85,
+        6.55
+      ]"
+    ></app-xy-line>
+  </div>
+</div>

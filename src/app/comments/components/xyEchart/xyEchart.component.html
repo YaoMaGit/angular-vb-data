@@ -1,0 +1,17 @@
+<div class="xyChart">
+  <div class="lefttopSpan positionSpan"></div>
+  <div class="righttopSpan positionSpan"></div>
+  <div class="leftbottomSpan positionSpan"></div>
+  <div class="rightbottomSpan positionSpan"></div>
+  <div class="header">
+    <div>{{title}}</div>
+    <div>
+        <Select defaultValue="2019" style='width: 120;background: rgba(83,208,255,0.46);border: 0px solid rgba(83,208,255,0.46);color: #ffffff;' >
+            <Option value="2019">2019</Option>
+          </Select>
+    </div>
+  </div>
+  <!-- <div  [id]='ElementsByID'  style="width: 100%;height:calc(100% - 60px);">12</div> -->
+  <div echarts [options]="options" style="width: 100%;height:calc(100% - 60px);"></div>
+  <!-- <div id="mains" style="width: 100%;height: 100%;"></div> -->
+</div>
